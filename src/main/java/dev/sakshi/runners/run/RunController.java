@@ -3,7 +3,6 @@ package dev.sakshi.runners.run;
 import java.util.List;
 import java.util.Optional;
 
-
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,9 +21,9 @@ import jakarta.validation.Valid;
 @RequestMapping("/api/runs")
 public class RunController {
 
-    private final RunRepository runRepository;
+    private final jdbcClientRunRepository runRepository;
 
-    public RunController(RunRepository runRepository){
+    public RunController(jdbcClientRunRepository runRepository){
         this.runRepository = runRepository;
     }
 

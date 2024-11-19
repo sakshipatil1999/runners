@@ -16,10 +16,10 @@ import dev.sakshi.runners.RunnersApplication;
 public class RunJsonDataLoader implements CommandLineRunner{
 
     private static final org.slf4j.Logger log = LoggerFactory.getLogger(RunnersApplication.class);
-    private final RunRepository runRepository;
+    private final jdbcClientRunRepository runRepository;
     private final ObjectMapper objectMapper;
    
-    public RunJsonDataLoader(RunRepository runRepository,ObjectMapper objectMapper){
+    public RunJsonDataLoader(jdbcClientRunRepository runRepository,ObjectMapper objectMapper){
         this.runRepository = runRepository;
         this.objectMapper = objectMapper;
     }
